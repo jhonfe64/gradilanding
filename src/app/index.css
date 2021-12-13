@@ -20,6 +20,12 @@
 	max-width: 85%;
 	margin: auto;
   }
+
+
+  /*==================================
+  	Header
+  *==================================*/
+
   header {
 	display: flex;
 	align-items: center;
@@ -41,11 +47,19 @@
 	padding-left: 20px;
 	color: #535c68;
   }
+
+
+  /*==================================
+  	Top banner
+  *==================================*/
+
+
   #topBanner {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	margin-top: 50px;
+	margin-top: 100px;
+	margin-bottom: 70px;
 	justify-content: space-between;
   }
   #topBanner h1 {
@@ -95,8 +109,15 @@
 	margin-top: 40px;
 	color: #ffffff;
   }
+
+
+  /*==================================
+  	Top Slider
+  *==================================*/
+
+
   .slider {
-	margin-top: 70px;
+	margin-top: 100px;
 	margin-bottom: 70px;
   }
   .topSliderWrapper {
@@ -159,12 +180,25 @@
   .topSliderWrapper .price p {
 	color: black;
   }
+
+
+
+  /*==================================
+  	Promoted Products
+  *==================================*/
+
+  #BottomPromotedProducts {
+	  margin-top: 100px;
+  }
+
+
   #promotedProducts .singleProduct {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 20px;
+	margin-top: 100px;
+	margin-bottom: 0px;
   }
   #promotedProducts .singleProduct:last-child {
 	flex-direction: row-reverse;
@@ -219,7 +253,9 @@
 	margin-bottom: 70px;
   }
   #BottomPromotedProducts div img {
-	width: 100%;
+	width: 70%;
+	display: block;
+	margin: auto;
 	position: relative;
   }
   #BottomPromotedProducts div .productName {
@@ -247,8 +283,17 @@
 	color: white;
 	transition: 0.3s;
   }
+
+
+  
+  /*==================================
+  	Suscribe
+  *==================================*/
+
+
   .suscribe {
 	display: flex;
+	flex-wrap: wrap;
 	margin-bottom: 70px;
 	padding: 40px 0px;
 	border-top: 1px solid #ecf0f1;
@@ -290,11 +335,19 @@
 	border: none;
 	width: 30%;
   }
+
+
+  /*==================================
+  	Footer
+  *==================================*/
+
+
   footer {
 	margin-top: 70px;
 	margin-bottom: 70px;
 	display: flex;
 	justify-content: space-between;
+	color: grey;
   }
   footer .logo {
 	width: 30%;
@@ -324,6 +377,9 @@
   footer h3 ~ div {
 	padding-bottom: 10px;
   }
+
+
+
   .company {
 	width: 20%;
   }
@@ -345,3 +401,109 @@
 	font-size: 1.1rem;
   }
   
+
+  @media only screen and (max-width: 1295px){
+	/*Top banner*/
+
+	#topBanner .description {
+		width: 100%;
+		margin-bottom: 100px;
+		margin-top: 70px;
+	}
+	  #topBanner .description div {
+		width: 100%;
+		text-align: center;
+	}
+	#topBanner .img-container {
+		margin: auto;
+		margin-bottom: 70px;
+	}
+
+	/*Top slider*/
+	.slider .topSliderWrapper .swiper-slide{
+		width: 50%;
+	}
+
+	/*Suscribe*/
+
+	.suscribe .title {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	.suscribe .suscribing {
+		width: 100%;
+	}
+  }
+
+  
+  @media only screen and (max-width: 1188px){
+
+	/*Top slider*/
+	#promotedProducts .singleProduct .img-container, .description{
+		width: 100%;
+		margin-bottom: 50px;
+	}
+
+	#BottomPromotedProducts div {
+		width: 100%;
+		text-align: center;
+	}
+	#BottomPromotedProducts div img {
+		width: 50%;
+		margin: auto;
+	}
+	#BottomPromotedProducts div:first-child {
+		margin-bottom: 50px;
+	}
+
+	footer {
+		flex-wrap: wrap;
+	}
+
+	footer .logo, .services, .company, .terms {
+		padding: 0;
+		width: 50%;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	footer .logo div {
+		justify-content: center;
+	}
+
+	footer .services {
+		width: 50% !important;
+	}
+
+	footer .social {
+		justify-content: center;
+	}	
+	
+	.suscribe .suscribing form {
+		flex-wrap: wrap;
+	}
+	.suscribe .suscribing form .radios{
+		width: 100%;
+		justify-content: center;
+		margin-bottom: 20px;
+	} 
+
+  }
+
+  @media only screen and (max-width: 600px){
+
+	/*Top slider*/
+	.slider .topSliderWrapper .swiper-slide{
+		width: 100%;
+	}
+
+	footer .logo, .services, .company, .terms {
+		width: 100%;
+	}
+
+	footer .services {
+		width: 100% !important;
+	}
+  }

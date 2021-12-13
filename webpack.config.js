@@ -6,8 +6,6 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-   //el archivo de salida o el archivo donde va a estar todo el codigo de la aplicacion 
-   //directorio donde se guarda el filename bundle.js en este cazo en la raiz del proyecto
   },
   mode: 'development',
   devServer: {
