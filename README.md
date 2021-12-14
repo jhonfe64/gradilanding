@@ -6,7 +6,7 @@
 
 en la consola: 
 
-- git clone https://github.com/jhonfe64/car2.git
+- git clone https://github.com/jhonfe64/gradilanding.git
 - Use npm i para instalar todas las dependencias 
 
 
