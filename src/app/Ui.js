@@ -1,7 +1,6 @@
 export class UI{
     constructor(){
         this.topBanner =  document.getElementById('topBanner');
-        //this.fullDescription = document.getElementById('fullDescription');
         this.topSlider = document.getElementById("topSliderWrapper");
         this.promotedProducts = document.getElementById("promotedProducts");
         this.bottomSlider = document.getElementById("bottomSliderWrapper");
@@ -131,7 +130,5 @@ export class UI{
                 }).join('')
             }
         `
-
-        console.log("############?=========>", allBottomproducts)
     }
 }

@@ -8,6 +8,7 @@ import '@fortawesome/fontawesome-free/js/brands';
     
 
 import {Products} from '../app/Products';
+import {Converter} from '../app/converter';
 import {UI} from '../app/Ui';
 
 const products = new Products('https://fakestoreapi.com/products/1');
@@ -15,6 +16,9 @@ const topSlider = new Products('https://fakestoreapi.com/products?limit=10');
 const promotedProducts = new Products('https://fakestoreapi.com/products');
 const bottomSlider = new Products(`https://fakestoreapi.com/products/category/women's clothing`);
 const bottomPromotedProducts = new Products('https://fakestoreapi.com/products?limit=10');
+
+const converter = new Converter();
+
 
 const ui = new UI();
 
@@ -58,3 +62,14 @@ const fetchProducts = (products, topSlider, promotedProducts, bottomSlider, bott
 //Cuand cargue el dom
 document.addEventListener('DOMcontentLoader', fetchProducts(products, topSlider, promotedProducts, bottomSlider, bottomPromotedProducts))
 
+
+const exchange = () => {
+    const data = converter.convertion();
+    data.then((res)=>{
+        console.log(res);
+    })
+}
+
+
+//cuando se haga click en el btn
+document.getElementById("euro").addEventListener("click", exchange)
